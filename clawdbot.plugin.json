@@ -1,0 +1,26 @@
+{
+  "id": "clawd-plugin-loom",
+  "name": "Clawdbot Loom",
+  "description": "Clawdbot plugin for learning graphs with spaced repetition and QMD search",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "libraryPath": { "type": "string" },
+      "collectionName": { "type": "string" },
+      "gitRemote": { "type": "string" },
+      "gitBranch": { "type": "string" },
+      "gitSync": { "type": "boolean" },
+      "gitAutoCommit": { "type": "boolean" },
+      "autoInstallQmd": { "type": "boolean" },
+      "mask": { "type": "string" },
+      "masteryThreshold": { "type": "number" },
+      "srsIntervals": {
+        "type": "array",
+        "items": { "type": "number" }
+      }
+    },
+    "required": ["libraryPath"]
+  }
+}
