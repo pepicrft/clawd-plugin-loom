@@ -1,8 +1,8 @@
-# 🧵 Clawdbot Loom
+# 🧵 OpenClaw Loom
 
 [![CI](https://github.com/pepicrft/clawd-plugin-loom/actions/workflows/ci.yml/badge.svg)](https://github.com/pepicrft/clawd-plugin-loom/actions/workflows/ci.yml)
 
-A Clawdbot plugin that turns your learning into a **living graph** of nodes, paths, and context captures. Loom blends mastery learning, spaced repetition, and retrieval practice, and indexes everything with QMD for fast search across Markdown and QMD files.
+An OpenClaw plugin that turns your learning into a **living graph** of nodes, paths, and context captures. Loom blends mastery learning, spaced repetition, and retrieval practice, and indexes everything with QMD for fast search across Markdown and QMD files.
 
 ## ✨ Features
 
@@ -17,13 +17,13 @@ A Clawdbot plugin that turns your learning into a **living graph** of nodes, pat
 ## 📦 Installation
 
 ```bash
-clawdbot plugins install clawd-plugin-loom
+openclaw plugins install openclaw-plugin-loom
 ```
 
 Or from GitHub:
 
 ```bash
-clawdbot plugins install github:pepicrft/clawd-plugin-loom
+openclaw plugins install github:pepicrft/clawd-plugin-loom
 ```
 
 ## ⚙️ Configuration
@@ -32,7 +32,7 @@ clawdbot plugins install github:pepicrft/clawd-plugin-loom
 {
   plugins: {
     entries: {
-      "clawd-plugin-loom": {
+      "openclaw-plugin-loom": {
         enabled: true,
         config: {
           libraryPath: "/Users/you/Loom",
@@ -72,7 +72,7 @@ Good node contents:
 - A short explanation in your own words
 - A concrete example or mini exercise
 - Links to prerequisite or follow-up nodes by `id`
-- If relevant, a “check yourself” prompt (question or task)
+- If relevant, a "check yourself" prompt (question or task)
 
 ### Node Frontmatter
 
@@ -128,34 +128,34 @@ Body starts here.
 
 ```bash
 # Initialize the library structure
-clawdbot learn init
+openclaw learn init
 
 # Create a path
-clawdbot learn path "Nix"
+openclaw learn path "Nix"
 
 # Add a node
-clawdbot learn node "Nix Store Basics" \
+openclaw learn node "Nix Store Basics" \
   --path nix \
   --summary "Understand /nix/store layout" \
   --tags nix,foundations
 
 # Capture a contextual situation
-clawdbot learn capture "German bakery chat" \
+openclaw learn capture "German bakery chat" \
   --path german \
   --tags german,speaking \
   "Asked for Schrippen and got confused about plural forms"
 
 # Unlock nodes whose prerequisites are met
-clawdbot learn unlock
+openclaw learn unlock
 
 # Suggest next node to study
-clawdbot learn next --start
+openclaw learn next --start
 
 # Review a node
-clawdbot learn review nix/store-basics --rating good
+openclaw learn review nix/store-basics --rating good
 
 # Query the library
-clawdbot learn query "nix derivations" --mode query --limit 5
+openclaw learn query "nix derivations" --mode query --limit 5
 ```
 
 ### Tools (for agents)

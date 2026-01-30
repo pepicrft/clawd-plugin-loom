@@ -24,8 +24,8 @@ import {
   type PathInput,
 } from "./learn.js";
 
-const PLUGIN_ID = "clawd-plugin-loom";
-const PLUGIN_NAME = "Clawdbot Loom";
+const PLUGIN_ID = "openclaw-plugin-loom";
+const PLUGIN_NAME = "OpenClaw Loom";
 
 const LEARNING_GUIDE = `# Loom Guide\n\nLoom is a local-first learning graph that blends mastery learning, spaced repetition, and retrieval practice.\n\n## Structure\n\n- paths/ -> one folder per learning path (e.g. nix, german)\n- nodes/ -> learning nodes grouped by path\n- contexts/ -> quick captures from real-life situations\n- sessions/ -> auto-logged review sessions\n- resources/ -> PDFs, links, datasets, or external assets\n\n## Files and Linking\n\n- Nodes and contexts are plain Markdown (.md).\n- Reference other nodes by id using wikilinks (e.g. [[nix/derivations]]) or standard markdown links.\n\n## What Is a Node?\n\nA node is the smallest unit of learning you want to master. Keep it narrow, testable, and self-contained.\n\nSuggested contents:\n- A short explanation in your own words\n- A concrete example or mini exercise\n- Links to prerequisite or follow-up nodes by id\n- A "check yourself" prompt (question or task)\n\n## Node Frontmatter\n\nRequired:\n- id\n- title\n- path\n- created\n- updated\n\nRecommended:\n- summary\n- type: concept | practice | project | checkpoint\n- status: locked | available | in-progress | mastered | paused\n- prerequisites: [node_id]\n- unlocks: [node_id]\n- familiarity: 0-5\n- srs_stage: 0+\n- last_reviewed\n- next_review\n- tags\n\n### Example Node\n\n---\nid: "nix/derivations"\ntitle: "Nix derivations"\nsummary: "Understand .drv files and build inputs"\npath: "nix"\ntype: "concept"\nstatus: "available"\nprerequisites:\n  - "nix/store-basics"\nunlocks:\n  - "nix/derivation-outputs"\nfamiliarity: 1\nsrs_stage: 0\nlast_reviewed: null\nnext_review: null\ncreated: "2026-01-03T12:00:00.000Z"\nupdated: "2026-01-03T12:00:00.000Z"\ntags:\n  - "nix"\n---\n\nBody starts here.\n\n## Context Captures\n\nContext notes are how you inject real-world situations into the graph. Use them to seed new nodes or link to existing ones.\n`;
 

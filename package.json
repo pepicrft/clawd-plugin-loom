@@ -1,7 +1,7 @@
 {
-  "name": "clawd-plugin-loom",
+  "name": "openclaw-plugin-loom",
   "version": "0.1.0",
-  "description": "Clawdbot plugin for learning graphs with spaced repetition and QMD search",
+  "description": "OpenClaw plugin for learning graphs with spaced repetition and QMD search",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "test:ui": "vitest --ui"
   },
   "keywords": [
-    "clawdbot",
+    "openclaw",
     "plugin",
     "learning",
     "graph",
@@ -31,7 +31,7 @@
     "typescript": "^5.0.0",
     "vitest": "^2.1.8"
   },
-  "clawdbot": {
+  "openclaw": {
     "extensions": [
       "dist/index.js"
     ]

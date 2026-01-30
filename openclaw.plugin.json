@@ -1,7 +1,7 @@
 {
-  "id": "clawd-plugin-loom",
-  "name": "Clawdbot Loom",
-  "description": "Clawdbot plugin for learning graphs with spaced repetition and QMD search",
+  "id": "openclaw-plugin-loom",
+  "name": "OpenClaw Loom",
+  "description": "OpenClaw plugin for learning graphs with spaced repetition and QMD search",
   "version": "0.1.0",
   "configSchema": {
     "type": "object",
