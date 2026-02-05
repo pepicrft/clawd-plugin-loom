@@ -2,7 +2,6 @@
   "id": "openclaw-plugin-loom",
   "name": "OpenClaw Loom",
   "description": "OpenClaw plugin for learning graphs with spaced repetition and QMD search",
-  "version": "0.1.0",
   "configSchema": {
     "type": "object",
     "additionalProperties": false,
@@ -16,11 +15,21 @@
       "autoInstallQmd": { "type": "boolean" },
       "mask": { "type": "string" },
       "masteryThreshold": { "type": "number" },
-      "srsIntervals": {
-        "type": "array",
-        "items": { "type": "number" }
-      }
+      "srsIntervals": { "type": "array", "items": { "type": "number" } }
     },
     "required": ["libraryPath"]
-  }
+  },
+  "uiHints": {
+    "libraryPath": { "label": "Loom Library Path", "placeholder": "/Users/you/Loom" },
+    "collectionName": { "label": "QMD Collection Name", "placeholder": "learn" },
+    "gitRemote": { "label": "Git Remote", "placeholder": "origin" },
+    "gitBranch": { "label": "Git Branch", "placeholder": "main" },
+    "gitSync": { "label": "Git Sync", "description": "Pull before and push after changes." },
+    "gitAutoCommit": { "label": "Git Auto Commit" },
+    "autoInstallQmd": { "label": "Auto Install QMD" },
+    "mask": { "label": "File Mask", "placeholder": "**/*.md" },
+    "masteryThreshold": { "label": "Mastery Threshold", "placeholder": "4" }
+  },
+  "version": "0.2.0",
+  "repository": "github:pepicrft/openclaw-plugin-loom"
 }

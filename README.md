@@ -1,20 +1,20 @@
-# 🧵 OpenClaw Loom
+# OpenClaw Loom
 
-[![CI](https://github.com/pepicrft/clawd-plugin-loom/actions/workflows/ci.yml/badge.svg)](https://github.com/pepicrft/clawd-plugin-loom/actions/workflows/ci.yml)
+[![CI](https://github.com/pepicrft/openclaw-plugin-loom/actions/workflows/ci.yml/badge.svg)](https://github.com/pepicrft/openclaw-plugin-loom/actions/workflows/ci.yml)
 
 An OpenClaw plugin that turns your learning into a **living graph** of nodes, paths, and context captures. Loom blends mastery learning, spaced repetition, and retrieval practice, and indexes everything with QMD for fast search across Markdown and QMD files.
 
-## ✨ Features
+## Features
 
-- 🧠 **Learning graph** with prerequisites, unlocks, and mastery states
-- 🔁 **Spaced repetition** scheduling with review ratings
-- 🧭 **Next-node recommendations** with automatic unlocks
-- 🧩 **Context captures** to inject real-life situations into your learning map
-- 🗂️ **Local-first** Markdown/QMD library with clean folder structure
-- 🔍 **QMD indexing** for semantic search and embeddings
-- 🔁 **Optional git sync** to keep your library in version control
+- Learning graph with prerequisites, unlocks, and mastery states
+- Spaced repetition scheduling with review ratings
+- Next-node recommendations with automatic unlocks
+- Context captures to inject real-life situations into your learning map
+- Local-first Markdown/QMD library with clean folder structure
+- QMD indexing for semantic search and embeddings
+- Optional git sync to keep your library in version control
 
-## 📦 Installation
+## Installation
 
 ```bash
 openclaw plugins install openclaw-plugin-loom
@@ -23,10 +23,14 @@ openclaw plugins install openclaw-plugin-loom
 Or from GitHub:
 
 ```bash
+<<<<<<< HEAD
 openclaw plugins install github:pepicrft/clawd-plugin-loom
+=======
+openclaw plugins install github:pepicrft/openclaw-plugin-loom
+>>>>>>> 72e4635 (Rename from clawd-plugin-loom to openclaw-plugin-loom)
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ```json5
 {
@@ -52,7 +56,7 @@ openclaw plugins install github:pepicrft/clawd-plugin-loom
 }
 ```
 
-## 🗂️ Loom Framework
+## Loom Framework
 
 ### Folder Convention
 
@@ -122,7 +126,7 @@ tags:
 Body starts here.
 ```
 
-## 🚀 Usage
+## Usage
 
 ### CLI
 
@@ -175,7 +179,7 @@ openclaw learn query "nix derivations" --mode query --limit 5
 - `learn.query`
 - `learn.graph`
 
-## 🔁 Git Sync
+## Git Sync
 
 When git sync is enabled, Loom:
 
@@ -183,7 +187,7 @@ When git sync is enabled, Loom:
 2. Auto-commits changes (when `gitAutoCommit` is true)
 3. Pushes after writing
 
-## 🧠 QMD Setup
+## QMD Setup
 
 The plugin auto-installs `qmd` if missing:
 
@@ -192,7 +196,7 @@ The plugin auto-installs `qmd` if missing:
 
 If you want to manage `qmd` manually, set `autoInstallQmd: false`.
 
-## 🔁 SRS Defaults
+## SRS Defaults
 
 The default spaced-repetition intervals (days) are:
 
@@ -202,23 +206,23 @@ The default spaced-repetition intervals (days) are:
 
 You can override them via `srsIntervals` in the plugin config.
 
-## 📋 Requirements
+## Requirements
 
 - Node 20+
 - bun or npm for installing qmd (unless qmd already installed)
 
-## 🧪 Tests
+## Tests
 
 ```bash
 npm test
 npm run build
 ```
 
-## 📚 Research Notes
+## Research Notes
 
 See `RESEARCH.md` for the learning science sources used to design Loom's framework.
 
-## 🧠 Learning Framework References
+## Learning Framework References
 
 The framework is informed by these cross-topic learning principles:
 
@@ -226,5 +230,5 @@ The framework is informed by these cross-topic learning principles:
 - **Testing effect / retrieval practice**: Roediger & Karpicke (2006), *Science*. DOI: https://doi.org/10.1126/science.1152408
 - **Interleaving vs. blocking**: Kornell & Bjork (2008), *Psychological Science*. DOI: https://doi.org/10.1111/j.1467-9280.2008.02127.x
 - **Mastery learning**: Bloom (1968), *Learning for Mastery*. ERIC: https://files.eric.ed.gov/fulltext/ED053419.pdf
-- **Deliberate practice**: Ericsson, Krampe, & Tesch-Römer (1993), *Psychological Review*. DOI: https://doi.org/10.1037/0033-295X.100.3.363
+- **Deliberate practice**: Ericsson, Krampe, & Tesch-Romer (1993), *Psychological Review*. DOI: https://doi.org/10.1037/0033-295X.100.3.363
 - **Concept mapping**: Novak & Gowin (1984), *Learning How to Learn*.

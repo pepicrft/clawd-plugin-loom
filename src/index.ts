@@ -270,7 +270,9 @@ function readConfig(api: any): LearnConfig {
   const entryConfig =
     entries[PLUGIN_ID]?.config ||
     entries.loom?.config ||
-    entries[PLUGIN_NAME]?.config;
+    entries[PLUGIN_NAME]?.config ||
+    entries["clawd-plugin-loom"]?.config ||
+    entries["Clawdbot Loom"]?.config;
 
   const config: LearnConfigInput = {
     ...(entryConfig || {}),
